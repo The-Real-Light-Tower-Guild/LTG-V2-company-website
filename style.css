@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background: url(images/LTGbackground.jpg) no-repeat center center fixed;
+  opacity: 0.8;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  font-family: "Potta One", cursive, Arial, sans-serif;
+}
+
+@media screen and (max-width: 780px) {
+  div.horizontal-menu {
+    width: 100%;
+  }
+}
+
+#flexcontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 780px) {
+  div#flexcontainer {
+    flex-direction: column;
+  }
+}
+
+#flexcolumn {
+  padding-top: 0px !important;
+  margin-top: 0px !important;
+  padding-left: 10px;
+}
+
+.horizontal-menu a {
+  background-color: #eee;
+  color: black;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.horizontal-menu a:hover {
+  background-color: #ccc;
+}
+
+.horizontal-menu a.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.list {
+  color: black;
+}
+
+li {
+  color: black;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  z-index: 10;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 20px;
+  max-width: 90%;
+  color: #fff;
+}
+
+#interncontainer {
+  text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  float: left;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+#bylaws {
+  border: black 1px solid;
+  overflow: hidden;
+  max-width: 90%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#bylaws:after {
+  content: "";
+  display: block;
+}
+
+#coding {
+  border: black 1px solid;
+  overflow: hidden;
+  max-width: 90%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#coding:after {
+  content: "";
+  display: block;
+}
+
+#position {
+  border: black 1px solid;
+  overflow: hidden;
+  max-width: 90%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#position:after {
+  content: "";
+  display: block;
+}
+
+#position {
+  border: black 1px solid;
+}
+
+#ltglogo {
+  width: 60px;
+  top: 0px;
+  right: 0px;
+  position: absolute;
+}
+
+#topheader {
+  position: relative;
+  text-align: center;
+  color: whitesmoke;
+  padding: 20px;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 250px;
+  float: left;
+  padding: 0 10px;
+  margin: 10px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.card-container {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.card-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+}
+
+.title {
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
